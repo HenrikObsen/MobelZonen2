@@ -1,0 +1,358 @@
+﻿body
+{
+    margin-top: 17px;
+    background-image: url('../GFX/bg.png');
+    background-repeat: repeat-x;
+    background-color: #e1e1e1;
+}
+
+#bannerBox
+{
+    background-image: url('../GFX/top.jpg');
+    margin-left: auto;
+    margin-right: auto;
+    height: 131px;
+    width: 762px;
+}
+#contentWrapper
+{
+    background-image: url('../GFX/content.gif');
+    background-repeat: repeat-y;
+    margin-left: auto;
+    margin-right: auto;
+    width: 762px;
+}
+#vMenu
+{
+    float: left;
+    width: 140px;
+    border-right: #e4e4e4 solid 1px;
+    min-height: 250px;
+    margin-top: 18px;
+    margin-bottom: 15px; /*background-color: red;*/
+}
+#content
+{
+    float: right;
+    width: 450px;
+    min-height: 300px; /*background-color: green;*/
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 8px;
+}
+#hMenu
+{
+    float: right;
+    width: 150px;
+    border-left: #e4e4e4 solid 1px;
+    min-height: 250px;
+    margin-top: 18px;
+    margin-bottom: 15px; /*background-color: blue;*/
+    font-size: 10px;
+}
+
+#vMenuCon
+{
+    width: 120px;
+    margin-top: -15px;
+    margin-left: 15px;
+    border-bottom: #e4e4e4 solid 1px;
+    min-height: 120px;
+    
+    color: #8f8f8f;
+    font-family: Arial;
+    font-size: 12px;
+    line-height: 15px;
+    
+}
+
+#hMenuCon
+{
+    width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: #e4e4e4 solid 1px;
+    min-height: 80px;
+}
+
+#clear
+{
+    clear: both;
+}
+#adress
+{
+    background-image: url('../GFX/bottom.jpg');
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    height: 18px;
+    width: 762px;
+    padding-top: 6px;
+    
+    color: #8f8f8f;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+#nyhed
+{
+    font-size: 12px;
+    text-align: center;
+}
+
+/* ------------------------------- Links --------------------------------------- */
+
+a.Menu
+{
+    color: #8f8f8f;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:visited.Menu
+{
+    color: #8f8f8f;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+a:hover.Menu
+{
+    color: #ff7f00;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a
+{
+    color: #000000;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a:visited
+{
+    color: #000000;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #ff7f00;
+    font-family: Arial;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+a.MenuLink2
+{
+    color: #8f8f8f;
+    font-family: Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+a:hover.MenuLink2
+{
+    color: #ff7f00;
+    font-family: Arial;
+    font-size: 10px;
+    text-decoration: none;
+}
+
+
+/* ------------------------------- Text --------------------------------------- */
+
+h1
+{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7f00;
+}
+h2
+{
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff7f00;
+    
+    margin-top: 0px;
+}
+
+.contentText, #content
+{
+    color: #000000;
+    font-family: Arial;
+    font-size: 12px;
+}
+
+/* ------------------------------- Produkt table --------------------------------------- */
+
+.proTable
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 446px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.proTableRtd
+{
+    border-right: #e4e4e4 solid 1px;
+    border-bottom: #e4e4e4 solid 1px;
+    border-top: #e4e4e4 solid 1px;
+    vertical-align: top;
+    padding: 10px;
+}
+.proTableLtd
+{
+    border-left: #e4e4e4 solid 1px;
+    border-bottom: #e4e4e4 solid 1px;
+    border-top: #e4e4e4 solid 1px;
+    vertical-align: top;
+    padding: 10px;
+}
+.proTableSpacer
+{
+    height: 20px;
+}
+
+
+/* ------------------------------- Link table --------------------------------------- */
+
+#linkTable
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100px;
+    margin-top: 40px;
+    margin-left: 15px;
+}
+
+.linkImgTd
+{
+    width: 20px;
+    height: 17px;
+}
+.linkLinkTd
+{
+    height: 17px;
+}
+
+
+/* ------------------------------- Kontakt table --------------------------------------- */
+
+#konTable
+{
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.konTd1
+{
+    vertical-align: top;
+}
+.konTd2
+{
+    vertical-align: top;
+    width: 266px;
+}
+
+
+/* ------------------------------- Validering --------------------------------------- */
+
+.valiGreen
+{
+    background-image: url('../GFX/ValidIcons/OK_Icon.png');
+    background-repeat: no-repeat;
+    
+    
+    border: #098b12 solid 1px;
+    background-color: #a8f4ae;
+    font-family: Arial;
+    font-size: 15px;
+
+    color: #098b12;
+    width: 90%;
+    padding-top: 16px;
+    padding-left: 55px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+}
+
+.valiRed
+{
+    background-image: url('../GFX/ValidIcons/Stop_Icon.png');
+    background-repeat: no-repeat;
+    
+    
+    border: red solid 1px;
+    background-color: #f5baba;
+    font-family: Arial;
+    font-size: 15px;
+
+    color: red;
+    width: 90%;
+    padding-top: 16px;
+    padding-left: 55px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+}
+
+.valiBlue
+{
+    background-image: url('../GFX/ValidIcons/Question_Icon.png');
+    background-repeat: no-repeat;
+    
+    
+    border: #2EA6CC solid 1px;
+    background-color: #A7E8FC;
+    font-family: Arial;
+    font-size: 15px;
+
+    color: #2EA6CC;
+    width: 90%;
+    padding-top: 16px;
+    padding-left: 55px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+}
+
+.valiYellow
+{
+    background-image: url('../GFX/ValidIcons/Advarsel_Icon.png');
+    background-repeat: no-repeat;
+        
+    border: black solid 1px;
+    background-color: #F7F3B0;
+    font-family: Arial;
+    font-size: 15px;
+
+    color: black;
+    width: 90%;
+    padding-top: 16px;
+    padding-left: 55px;
+    padding-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 7px;
+}

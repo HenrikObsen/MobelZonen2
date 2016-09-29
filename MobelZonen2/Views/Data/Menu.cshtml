@@ -1,0 +1,8 @@
+﻿@using RepoMZ2
+@model List<RepoMZ2.Kategori>
+
+
+    @foreach (Kategori k in Model)
+    {
+        <a href="/Produkt/ListProdukter/@k.ID/" class="menuLinks">@k.Navn</a><br/>
+    }

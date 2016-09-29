@@ -1,0 +1,21 @@
+﻿@using RepoMZ2
+@model RepoMZ2.ProduktListe
+@{
+    ViewBag.Title = "ListProdukter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.KategoriNavn</h2>
+
+@foreach (Produkt p in Model.Produkter)
+{
+    <table class="proTable">
+        <tr>
+            <td class="proTableLtd"><h2>@p.Navn</h2>pro.Tekst<br />Pris:@p.Pris kr.</td>
+            <td class="proTableRtd"><img src="/Content/Billeder/@p.Billede" height="150" /></td>
+        </tr>
+    </table>
+
+}
+
+

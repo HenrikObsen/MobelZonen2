@@ -1,0 +1,72 @@
+﻿@using RepoMZ2
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Styles/Main.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div id="bannerBox">
+    </div>
+    <main id="contentWrapper">
+        <nav id="vMenu">
+            <div id="vMenuCon">
+                <h1>Kattegorier</h1>
+
+                @{
+                    Html.RenderAction("Menu", "Data");
+                }
+
+            </div>
+
+         
+
+            <table id="linkTable">
+                <tr>
+                    <td class="linkImgTd"><img src="/Content/GFX/home.jpg" /></td>
+                    <td class="linkLinkTd"><a href="#" class="Menu">Home</a></td>
+                </tr>
+                <tr>
+                    <td class="linkImgTd"><img src="/Content/GFX/Info.jpg" /></td>
+                    <td class="linkLinkTd"><a href="#" class="Menu">Information</a></td>
+                </tr>
+                <tr>
+                    <td class="linkImgTd"><img src="/Content/GFX/print.jpg" /></td>
+                    <td class="linkLinkTd"><a href="#" onclick="javascript:window.print();" class="Menu">Print</a></td>
+                </tr>
+                <tr>
+                    <td class="linkImgTd"><img src="/Content/GFX/post.jpg" /></td>
+                    <td class="linkLinkTd"><a href="#" class="Menu">Kontakt</a></td>
+                </tr>
+                <tr>
+                    <td class="linkImgTd"><img src="/Content/GFX/mail.jpg" /></td>
+                    <td class="linkLinkTd"></td>
+                </tr>
+            </table>
+
+
+        </nav>
+        <div id="hMenu">
+            <div id="hMenuCon">
+           
+            </div>
+            <div id="nyhed">
+
+            </div>
+        </div>
+        <div id="content">
+            @RenderBody()
+        </div>
+        <div id="clear">
+        </div>
+    </main>
+    <footer id="adress">
+        @{
+            Html.RenderAction("Footer", "Data");
+        }
+    </footer>
+
+</body>
+</html>

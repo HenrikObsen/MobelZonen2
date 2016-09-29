@@ -1,0 +1,15 @@
+﻿@using RepoMZ2
+@model List<RepoMZ2.Kategori>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Rediger kategorier</h2>
+<a href="/Admin/AKategori/Add/">Opret ny kategori</a>
+<br/>
+<ul>
+    @foreach (Kategori kat in Model)
+    {
+        <li>@kat.Navn <a href="/Admin/Akategori/Edit/@kat.ID/">Rediger</a> <a href="/Admin/Akategori/Delete/@kat.ID/" onclick="javascript:return confirm('Er du sikker på at du vil slette @kat.Navn?');">Slet</a></li>
+    }
+</ul>

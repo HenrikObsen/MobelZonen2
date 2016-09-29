@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Tilføj kategori</h2>
+
+<form action="/Admin/AKategori/Add/" method="POST">
+    Navn: <input name="Navn" type="text"/>
+    <br/>
+    Sortering:
+    <input name="Sortering" type="text" />
+    <br/>
+    <input type="submit" value="Gem"/>
+</form>
+

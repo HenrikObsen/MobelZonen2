@@ -1,0 +1,17 @@
+﻿@model RepoMZ2.Kategori
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Rediger Kategori</h2>
+
+<form action="/Admin/AKategori/Edit/" method="POST">
+    Navn: <input name="Navn" type="text" value="@Model.Navn" />
+    <br />
+    Sortering:
+    <input name="Sortering" type="text" value="@Model.Sortering" />
+    <br />
+    <input type="submit" value="Gem"/>
+    <input type="hidden" name="ID" value="@Model.ID" />
+</form>
+
