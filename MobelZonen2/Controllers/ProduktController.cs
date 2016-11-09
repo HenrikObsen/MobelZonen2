@@ -11,10 +11,13 @@ namespace MobelZonen2.Controllers
     {
         KategoriFac kf = new KategoriFac();
         ProduktFac pf = new ProduktFac();
+        SEOFac SF = new SEOFac();
         // GET: Produkt
         public ActionResult ListProdukter(int id)
         {
             ProduktListe pl = new ProduktListe();
+
+            pl.SEO = SF.Get(kf.Get(id).SEOID);
             pl.KategoriNavn = kf.Get(id).Navn;
             pl.Produkter = pf.GetBy("KatID", id);
 

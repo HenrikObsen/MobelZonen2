@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "MailForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Send os en mail</h2>
+
+<form action="/Home/MailForm/" method="POST">
+
+    Din email:<br/>
+    <input type="text" name="Email"/>
+    <br/>
+    Emne:<br />
+    <input type="text" name="Emne" />
+    <br/>
+    <textarea name="Besked" width="300"></textarea>
+    <br/>
+    <input type="submit" value="Send"/>
+    @ViewBag.MSG
+</form>

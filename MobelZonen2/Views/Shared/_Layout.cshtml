@@ -1,11 +1,16 @@
-﻿@using RepoMZ2
+﻿@using System.ServiceModel.Configuration
+@using RepoMZ2
 <!DOCTYPE html>
 
 <html>
 <head>
     <link href="~/Content/Styles/Main.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width"/>
+  
     <title>@ViewBag.Title</title>
+
+    @RenderSection("head", required: false)
+
 </head>
 <body>
     <div id="bannerBox">
@@ -38,7 +43,7 @@
                 </tr>
                 <tr>
                     <td class="linkImgTd"><img src="/Content/GFX/post.jpg" /></td>
-                    <td class="linkLinkTd"><a href="#" class="Menu">Kontakt</a></td>
+                    <td class="linkLinkTd"><a href="/Home/Kontakt/" class="Menu">Kontakt</a></td>
                 </tr>
                 <tr>
                     <td class="linkImgTd"><img src="/Content/GFX/mail.jpg" /></td>

@@ -101,6 +101,7 @@
     <Content Include="Content\Billeder\Daglig7.jpg" />
     <Content Include="Content\Billeder\Javs0.jpg" />
     <Content Include="Content\Billeder\Kontakt.jpg" />
+    <Content Include="Content\Billeder\Kontakt\Kontakt.jpg" />
     <Content Include="Content\Billeder\Kontor1.jpg" />
     <Content Include="Content\Billeder\Kontor2.jpg" />
     <Content Include="Content\Billeder\Kontor3.jpg" />
@@ -137,6 +138,7 @@
     <Content Include="Areas\Admin\Views\AKategori\Index.cshtml" />
     <Content Include="Areas\Admin\Views\AKategori\Add.cshtml" />
     <Content Include="Areas\Admin\Views\AKategori\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\AKontakt\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -147,6 +149,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AKategoriController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AKontaktController.cs" />
     <Compile Include="Areas\Admin\Controllers\DefaultController.cs" />
     <Compile Include="Controllers\DataController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -154,6 +157,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\MailFac.cs" />
+    <Compile Include="Helpers\Uploader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +178,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\Kontakt.cshtml" />
+    <Content Include="Views\Home\MailForm.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

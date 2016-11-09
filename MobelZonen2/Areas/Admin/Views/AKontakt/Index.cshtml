@@ -1,0 +1,49 @@
+﻿@model RepoMZ2.Kontakt
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Rediger Kontakt</h2>
+
+<table>
+    <tr>
+        <td>
+            <form action="/Admin/AKontakt/Edit/" method="POST">
+                Navn:<br/>
+                <input type="text" name="Navn" value="@Model.Navn" />
+                <br/>
+                Adresse:<br />
+                <input type="text" name="Adresse" value="@Model.Adresse" />
+                <br/>
+                PostNr:<br />
+                <input type="text" name="PostNr" value="@Model.PostNr" />
+                <br/>
+                By Navn:<br />
+                <input type="text" name="Bynavn" value="@Model.Bynavn" />
+                <br/>
+                Tlf:<br />
+                <input type="text" name="Tlf" value="@Model.Tlf" />
+                <br/>
+                Fax:<br />
+                <input type="text" name="Fax" value="@Model.Fax" />
+                <br/>
+                E-mail:<br />
+                <input type="text" name="Email" value="@Model.Email" />
+                <br/>
+                <textarea name="Tider">@Model.Tider</textarea>
+                <input type="submit" value="Gem"/>
+                <input name="ID" type="hidden" value="@Model.ID"/>
+                <input name="Billede" type="hidden" value="@Model.Billede" />
+            </form>
+        </td>
+        <td>
+            <form action="/Admin/AKontakt/Upload/" method="POST" enctype="multipart/form-data">
+                <img src="/Content/Billeder/Kontakt/@Model.Billede"/>
+                <br/>
+                <input name="billede" type="file"/>
+                <input type="submit" value="Gem"/>
+                @ViewBag.MSG
+            </form>
+        </td>
+    </tr>
+</table>

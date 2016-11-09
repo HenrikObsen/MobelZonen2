@@ -11,6 +11,8 @@ namespace RepoMZ2
 
 		 public int Sortering { get; set; }
 
+		 public int SEOID { get; set; }
+
 	 }
 
 }

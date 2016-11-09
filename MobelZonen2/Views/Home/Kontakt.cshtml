@@ -1,0 +1,38 @@
+﻿@model RepoMZ2.Kontakt
+@{
+    ViewBag.Title = "Kontakt";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kontakt</h2>
+<hr />
+
+<table>
+    <tr>
+        <td>
+            <p>
+                <b>@Model.Navn</b>
+                <br />
+                @Model.Adresse
+                <br />
+                @Model.PostNr @Model.Bynavn
+            </p>
+            <p>
+                @Model.Tlf
+                <br />
+                @Model.Fax
+            </p>
+            <p>
+                @Model.Email
+            </p>
+            <p>
+                @Html.Raw(Model.Tider)
+            </p>
+            <a href ="/Home/MailForm/">Send os en mail her!</a>
+
+        </td>
+        <td>
+            <img src="/Content/Billeder/Kontakt/@Model.Billede" />
+        </td>
+    </tr>
+</table>

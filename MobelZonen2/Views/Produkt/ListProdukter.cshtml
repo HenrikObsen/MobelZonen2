@@ -1,8 +1,16 @@
 ﻿@using RepoMZ2
 @model RepoMZ2.ProduktListe
 @{
-    ViewBag.Title = "ListProdukter";
+    ViewBag.Title = Html.Raw(Model.SEO.Title);
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section head
+{
+  
+
+    <meta name="keywords" content="@Html.Raw(Model.SEO.Keywords)"/>
+    <meta name="description" content="@Html.Raw(Model.SEO.Description)"/>
+
 }
 
 <h2>@Model.KategoriNavn</h2>
