@@ -1,17 +1,42 @@
-﻿@model RepoMZ2.Kategori
+﻿@model RepoMZ2.EditKat
 @{
     ViewBag.Title = "Edit";
 }
 
 <h2>Rediger Kategori</h2>
+<table>
+    <tr>
+        <td>
+            <b>Kategori data</b>
+            <br/>
+            <form action="/Admin/AKategori/Edit/" method="POST">
+                Navn: <input name="Navn" type="text" value="@Model.Kategori.Navn" />
+                <br />
+                Sortering:
+                <input name="Sortering" type="text" value="@Model.Kategori.Sortering" />
+                <br />
+                <input type="submit" value="Gem" />
+                <input type="hidden" name="ID" value="@Model.Kategori.ID" />
+            </form>
+        </td>
+        <td>
+            <b>SEO</b>
+            <br/>
+            <form action="/Admin/Akategori/EditSEO/" method="POST">
+                Title:<br />
+                <input type="text" name="Title" value="@Model.Seo.Title" />
+                <br/>
+                Keywords:<br/>
+                <textarea name="Keywords">@Model.Seo.Keywords</textarea>
+                Description:<br/>
+                <textarea name="Description">@Model.Seo.Description</textarea>
+                <br/>
+                <input type="submit" value="Gem"/>
+                <input type="hidden" name="ID" value="@Model.Seo.ID"/>
+                <input type="hidden" name="katID" value="@Model.Kategori.ID"/>
+            </form>
+        </td>
+    </tr>
+</table>
 
-<form action="/Admin/AKategori/Edit/" method="POST">
-    Navn: <input name="Navn" type="text" value="@Model.Navn" />
-    <br />
-    Sortering:
-    <input name="Sortering" type="text" value="@Model.Sortering" />
-    <br />
-    <input type="submit" value="Gem"/>
-    <input type="hidden" name="ID" value="@Model.ID" />
-</form>
 

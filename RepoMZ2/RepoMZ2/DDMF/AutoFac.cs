@@ -79,7 +79,7 @@ namespace RepoMZ2
             }
         }
 
-        public void Insert(T pro)
+        public int Insert(T pro)
         {
             string parms = "";
             string fielsds = "";
@@ -98,7 +98,7 @@ namespace RepoMZ2
             fielsds = fielsds.Substring(0, fielsds.Length - 2);
             parms = parms.Substring(0, parms.Length - 2);
 
-            using (var cmd = new SqlCommand("INSERT INTO " + table + " (" + fielsds + ") VALUES(" + parms + ")", Conn.CreateConnection()))
+            using (var cmd = new SqlCommand("INSERT INTO " + table + " (" + fielsds + ") VALUES(" + parms + ");SELECT SCOPE_IDENTITY() as curID;", Conn.CreateConnection()))
             {
 
                 foreach (var prop in mappings)
@@ -109,11 +109,18 @@ namespace RepoMZ2
                     }
                 }
 
-                cmd.ExecuteNonQuery();
+                var r = cmd.ExecuteReader();
+                int curID = 0;
+                if (r.Read())
+                {
+                    curID = int.Parse(r["curID"].ToString());
+                }
+
+                r.Close();
                 cmd.Connection.Close();
+                return curID;
             }
         }
-
         public void Update(T pro)
         {
             string fAndP = "";
