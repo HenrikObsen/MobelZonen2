@@ -2,15 +2,30 @@
 @{
     ViewBag.Title = "Add";
 }
+@section head
+{
 
-<h2>Tilføj kategori</h2>
+    <link href="~/Content/Styles/AdminMain.min.css" rel="stylesheet" />
+
+}
+<h1>Tilføj kategori</h1>
 
 <form action="/Admin/AKategori/Add/" method="POST">
-    Navn: <input name="Navn" type="text"/>
-    <br/>
-    Sortering:
-    <input name="Sortering" type="text" />
-    <br/>
-    <input type="submit" value="Gem"/>
+    <table class="formTB">
+        <tr>
+            <td><b>Navn:</b></td>
+            <td><input name="Navn" type="text"/></td>
+        </tr>
+        <tr>
+            <td><b>Sortering:</b></td>
+            <td><input name="Sortering" type="text" /></td>
+        </tr>
+        <tr>
+            <td rowspan="2">
+                <input type="submit" value="Gem" />
+           
+            </td>
+        </tr>
+    </table>
 </form>
 

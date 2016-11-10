@@ -2,41 +2,66 @@
 @{
     ViewBag.Title = "Edit";
 }
+@section head
+{
 
-<h2>Rediger Kategori</h2>
-<table>
-    <tr>
-        <td>
-            <b>Kategori data</b>
-            <br/>
-            <form action="/Admin/AKategori/Edit/" method="POST">
-                Navn: <input name="Navn" type="text" value="@Model.Kategori.Navn" />
-                <br />
-                Sortering:
-                <input name="Sortering" type="text" value="@Model.Kategori.Sortering" />
-                <br />
-                <input type="submit" value="Gem" />
-                <input type="hidden" name="ID" value="@Model.Kategori.ID" />
-            </form>
-        </td>
-        <td>
-            <b>SEO</b>
-            <br/>
-            <form action="/Admin/Akategori/EditSEO/" method="POST">
-                Title:<br />
-                <input type="text" name="Title" value="@Model.Seo.Title" />
-                <br/>
-                Keywords:<br/>
-                <textarea name="Keywords">@Model.Seo.Keywords</textarea>
-                Description:<br/>
-                <textarea name="Description">@Model.Seo.Description</textarea>
-                <br/>
-                <input type="submit" value="Gem"/>
-                <input type="hidden" name="ID" value="@Model.Seo.ID"/>
-                <input type="hidden" name="katID" value="@Model.Kategori.ID"/>
-            </form>
-        </td>
-    </tr>
-</table>
+    <link href="~/Content/Styles/AdminMain.min.css" rel="stylesheet" />
+
+}
+<h1>Rediger Kategori</h1>
+<div class="row">
+    <div class="col-sm-6">
+        <h2>Kategori data</h2>
+
+        <form action="/Admin/AKategori/Edit/" method="POST">
+            <table class="formTB">
+                <tr>
+                    <td><b>Navn:</b></td>
+                    <td><input name="Navn" type="text" value="@Model.Kategori.Navn" /></td>
+                </tr>
+                <tr>
+                    <td><b>Sortering:</b></td>
+                    <td><input name="Sortering" type="text" value="@Model.Kategori.Sortering" /></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <input type="submit" value="Gem" />
+                        <input type="hidden" name="ID" value="@Model.Kategori.ID" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+
+    </div>
+    <div class="col-sm-6">
+        <h2>SEO</h2>
+        <form action="/Admin/Akategori/EditSEO/" method="POST">
+            <table class="formTB">
+                <tr>
+                    <td>Title:</td>
+                    <td><input type="text" name="Title" value="@Model.Seo.Title" /></td>
+                </tr>
+                <tr>
+                    <td>Keywords:</td>
+                    <td><textarea name="Keywords">@Model.Seo.Keywords</textarea></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                    <td><textarea name="Description">@Model.Seo.Description</textarea></td>
+                </tr>
+                <tr>
+                    <td rowspan="2">
+                        <input type="submit" value="Gem" />
+                        <input type="hidden" name="ID" value="@Model.Seo.ID" />
+                        <input type="hidden" name="katID" value="@Model.Kategori.ID" />
+                    </td>
+                </tr>
+            </table>
+
+
+        </form>
+    </div>
+</div>
+    
 
 

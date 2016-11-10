@@ -1,0 +1,129 @@
+﻿
+$gradiantStart: #e0dcdc;
+$gradiantEnd: #f7f5f5;
+$borderColor: gray;
+$mainBlack: #222222;
+
+body {
+    font-family: Arial;
+}
+
+.center{
+    text-align:center;
+}
+
+
+input[type=submit] {
+    border-radius: 5px;
+    border: solid $borderColor 1px;
+    background: $mainBlack;
+    color: white;
+    padding: 5px 15px 5px 15px;
+}
+
+button {
+    border-radius: 5px;
+    border: solid $borderColor 1px;
+    background: $mainBlack;
+    color: white;
+    padding: 5px 15px 5px 15px;
+}
+
+h2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+td {
+    vertical-align: top;
+}
+
+.formTB {
+    border-spacing: 10px;
+    border-collapse: collapse;
+    margin-right: 20px;
+
+
+    input[type=text] {
+        border-radius: 5px;
+        border: solid $borderColor 1px;
+        padding: 3px;
+        width: 300px;
+    }
+
+    tr {
+        border: solid $borderColor 1px;
+        background: $gradiantStart; /* For browsers that do not support gradients */
+        background: -webkit-linear-gradient($gradiantStart, $gradiantEnd); /* For Safari 5.1 to 6.0 */
+        background: -o-linear-gradient($gradiantStart, $gradiantEnd); /* For Opera 11.1 to 12.0 */
+        background: -moz-linear-gradient($gradiantStart, $gradiantEnd); /* For Firefox 3.6 to 15 */
+        background: linear-gradient($gradiantStart, $gradiantEnd); /* Standard syntax */
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    tr td:first-child {
+        padding: 10px;
+        color: gray;
+        margin-bottom: 10px;
+        width: 100px;
+    }
+
+    tr td:last-child {
+        padding: 10px;
+        color: gray;
+        margin-bottom: 10px;
+
+        textarea {
+            width: 300px;
+            height: 150px;
+            border-radius: 5px;
+            border: solid $borderColor 1px;
+            padding: 3px;
+        }
+    }
+
+    tr:last-child {
+        background: white;
+        border: 0;
+
+        tr {
+            padding-left: 0px;
+        }
+    }
+}
+
+.listTB {
+    width: 600px;
+
+    /*td:nth-child(2) {
+        width: 100px;
+    }*/
+
+    td {
+        padding: 10px;
+            
+    }
+
+    tr:nth-child(odd) {
+        background-color: $gradiantStart;
+    }
+
+    tr:nth-child(even) {
+        background-color: $gradiantEnd;
+    }
+
+    tr td:last-child {
+        text-align: right;
+        width: 100px;
+    }
+
+    tr {
+        border: solid $borderColor 1px;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+}

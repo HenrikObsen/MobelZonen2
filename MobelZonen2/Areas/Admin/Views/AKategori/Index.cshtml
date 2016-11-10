@@ -3,13 +3,26 @@
 @{
     ViewBag.Title = "Index";
 }
+@section head
+{
 
-<h2>Rediger kategorier</h2>
-<a href="/Admin/AKategori/Add/">Opret ny kategori</a>
-<br/>
-<ul>
+    <link href="~/Content/Styles/AdminMain.min.css" rel="stylesheet" />
+
+}
+<h1>Rediger kategorier</h1>
+<p><button onclick="window.location('/Admin/AKategori/Add/');">Opret ny kategori</button></p>
+
+
+<table class="listTB">
+    
+
     @foreach (Kategori kat in Model)
     {
-        <li>@kat.Navn <a href="/Admin/Akategori/Edit/@kat.ID/">Rediger</a> <a href="/Admin/Akategori/Delete/@kat.ID/" onclick="javascript:return confirm('Er du sikker på at du vil slette @kat.Navn?');">Slet</a></li>
+        <tr>
+            <td>@kat.Navn</td>
+           
+            <td><a href="/Admin/Akategori/Edit/@kat.ID/">Rediger</a> <a href="/Admin/Akategori/Delete/@kat.ID/" onclick="javascript:return confirm('Er du sikker på at du vil slette @kat.Navn?');">Slet</a></td>
+        </tr>
     }
-</ul>
+
+</table>

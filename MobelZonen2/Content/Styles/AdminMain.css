@@ -1,0 +1,92 @@
+﻿body {
+  font-family: Arial; }
+
+.center {
+  text-align: center; }
+
+input[type=submit] {
+  border-radius: 5px;
+  border: solid gray 1px;
+  background: #222222;
+  color: white;
+  padding: 5px 15px 5px 15px; }
+
+button {
+  border-radius: 5px;
+  border: solid gray 1px;
+  background: #222222;
+  color: white;
+  padding: 5px 15px 5px 15px; }
+
+h2 {
+  font-size: 14px;
+  font-weight: bold; }
+
+td {
+  vertical-align: top; }
+
+.formTB {
+  border-spacing: 10px;
+  border-collapse: collapse;
+  margin-right: 20px; }
+  .formTB input[type=text] {
+    border-radius: 5px;
+    border: solid gray 1px;
+    padding: 3px;
+    width: 300px; }
+  .formTB tr {
+    border: solid gray 1px;
+    background: #e0dcdc;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#e0dcdc, #f7f5f5);
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#e0dcdc, #f7f5f5);
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#e0dcdc, #f7f5f5);
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#e0dcdc, #f7f5f5);
+    /* Standard syntax */
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+  .formTB tr td:first-child {
+    padding: 10px;
+    color: gray;
+    margin-bottom: 10px;
+    width: 100px; }
+  .formTB tr td:last-child {
+    padding: 10px;
+    color: gray;
+    margin-bottom: 10px; }
+    .formTB tr td:last-child textarea {
+      width: 300px;
+      height: 150px;
+      border-radius: 5px;
+      border: solid gray 1px;
+      padding: 3px; }
+  .formTB tr:last-child {
+    background: white;
+    border: 0; }
+    .formTB tr:last-child tr {
+      padding-left: 0px; }
+
+.listTB {
+  width: 600px;
+  /*td:nth-child(2) {
+        width: 100px;
+    }*/ }
+  .listTB td {
+    padding: 10px; }
+  .listTB tr:nth-child(odd) {
+    background-color: #e0dcdc; }
+  .listTB tr:nth-child(even) {
+    background-color: #f7f5f5; }
+  .listTB tr td:last-child {
+    text-align: right;
+    width: 100px; }
+  .listTB tr {
+    border: solid gray 1px;
+    display: block;
+    margin-bottom: 10px;
+    border-radius: 5px; }
+

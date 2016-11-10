@@ -129,6 +129,12 @@
     <Content Include="Content\GFX\print.jpg" />
     <Content Include="Content\GFX\top.jpg" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\Styles\AdminMain.css">
+      <DependentUpon>AdminMain.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\AdminMain.min.css">
+      <DependentUpon>AdminMain.css</DependentUpon>
+    </Content>
     <Content Include="Content\Styles\Login.css" />
     <Content Include="Content\Styles\Main.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -139,6 +145,11 @@
     <Content Include="Areas\Admin\Views\AKategori\Add.cshtml" />
     <Content Include="Areas\Admin\Views\AKategori\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\AKontakt\Index.cshtml" />
+    <Content Include="Content\Styles\AdminMain.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
