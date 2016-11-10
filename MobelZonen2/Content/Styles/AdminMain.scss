@@ -8,8 +8,8 @@ body {
     font-family: Arial;
 }
 
-.center{
-    text-align:center;
+.center {
+    text-align: center;
 }
 
 
@@ -96,34 +96,37 @@ td {
 
 .listTB {
     width: 600px;
+     
 
-    /*td:nth-child(2) {
-        width: 100px;
-    }*/
-
-    td {
-        padding: 10px;
-            
-    }
-
-    tr:nth-child(odd) {
+    .rowi:nth-child(odd) {
         background-color: $gradiantStart;
+ 
+        
     }
 
-    tr:nth-child(even) {
+    .rowi:nth-child(even) {
         background-color: $gradiantEnd;
+    
+        
     }
 
-    tr td:last-child {
-        text-align: right;
-        width: 100px;
-    }
-
-    tr {
-        border: solid $borderColor 1px;
-        display: block;
+    .rowi {
+        padding: 7px;
         margin-bottom: 10px;
+        border: solid $borderColor 1px;
         border-radius: 5px;
-    }
 
+
+        div:first-child {
+            float: left;
+            width: 100px;
+            
+        }
+
+        div:nth-child(2) {
+            float: right;
+            width: 80px;
+          
+        }
+    }
 }

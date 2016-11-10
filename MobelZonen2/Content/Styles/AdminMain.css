@@ -71,22 +71,20 @@ td {
       padding-left: 0px; }
 
 .listTB {
-  width: 600px;
-  /*td:nth-child(2) {
-        width: 100px;
-    }*/ }
-  .listTB td {
-    padding: 10px; }
-  .listTB tr:nth-child(odd) {
+  width: 600px; }
+  .listTB .rowi:nth-child(odd) {
     background-color: #e0dcdc; }
-  .listTB tr:nth-child(even) {
+  .listTB .rowi:nth-child(even) {
     background-color: #f7f5f5; }
-  .listTB tr td:last-child {
-    text-align: right;
-    width: 100px; }
-  .listTB tr {
-    border: solid gray 1px;
-    display: block;
+  .listTB .rowi {
+    padding: 7px;
     margin-bottom: 10px;
+    border: solid gray 1px;
     border-radius: 5px; }
+    .listTB .rowi div:first-child {
+      float: left;
+      width: 100px; }
+    .listTB .rowi div:nth-child(2) {
+      float: right;
+      width: 80px; }
 
