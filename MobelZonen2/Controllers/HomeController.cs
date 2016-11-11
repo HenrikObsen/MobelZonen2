@@ -11,10 +11,21 @@ namespace MobelZonen2.Controllers
     {
 
         KontaktFac kf = new KontaktFac();
-      
+
 
         // GET: Home
         public ActionResult Index()
+        {
+           
+            return View();
+        }
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Login(string email, string password)
         {
             return View();
         }
@@ -27,7 +38,7 @@ namespace MobelZonen2.Controllers
         public ActionResult MailForm()
         {
             return View();
-        } 
+        }
         [HttpPost]
         public ActionResult MailForm(string Email, string Emne, string Besked)
         {
@@ -40,7 +51,7 @@ namespace MobelZonen2.Controllers
             return View();
 
         }
-      
+
 
     }
 }

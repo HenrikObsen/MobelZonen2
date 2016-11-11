@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+</head>
+<body>
+<div>
+    @*@Crypto.Hash("admin")*@
+    <form action="/Home/Login/" method="POST">
+        Email:
+        <br/>
+        <input type="email" name="email"/>
+        <br/>
+        Password:
+        <br/>
+        <input type="password" name="password"/>
+        <br/>
+        <input type="submit" value="Log-in"/>
+    </form>
+
+</div>
+</body>
+</html>
