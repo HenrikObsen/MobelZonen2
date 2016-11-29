@@ -9,6 +9,7 @@ namespace MobelZonen2.Areas.Admin.Controllers
     public class DefaultController : Controller
     {
         // GET: Admin/Default
+        [Authorize]
         public ActionResult Index()
         {
             return View();

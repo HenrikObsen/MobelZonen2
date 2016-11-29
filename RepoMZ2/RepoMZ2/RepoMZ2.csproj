@@ -45,10 +45,12 @@
     <Compile Include="DDMF\AutoFac.cs" />
     <Compile Include="DDMF\Conn.cs" />
     <Compile Include="DDMF\Mapper.cs" />
+    <Compile Include="Factories\BrugerFac.cs" />
     <Compile Include="Factories\KategoriFac.cs" />
     <Compile Include="Factories\KontaktFac.cs" />
     <Compile Include="Factories\ProduktFac.cs" />
     <Compile Include="Factories\SEOFac.cs" />
+    <Compile Include="Models\Bruger.cs" />
     <Compile Include="Models\SEO.cs" />
     <Compile Include="Models\Kategori.cs" />
     <Compile Include="Models\Kontakt.cs" />

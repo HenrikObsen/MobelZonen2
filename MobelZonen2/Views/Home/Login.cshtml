@@ -9,22 +9,55 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Login</title>
+    <style>
+        .outer {
+            display: table;
+            position: absolute;
+            height: 90%;
+            width: 90%;
+        }
+
+        .middle {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .inner {
+            font-family: arial;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            border: solid 1px gray;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: lightgray;
+        }
+        input {
+            border: solid 1px gray;
+            border-radius: 5px;
+            padding: 3px;
+        }
+    </style>
 </head>
 <body>
-<div>
-    @*@Crypto.Hash("admin")*@
-    <form action="/Home/Login/" method="POST">
-        Email:
-        <br/>
-        <input type="email" name="email"/>
-        <br/>
-        Password:
-        <br/>
-        <input type="password" name="password"/>
-        <br/>
-        <input type="submit" value="Log-in"/>
-    </form>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
 
-</div>
+                @*@Crypto.Hash("admin")*@
+                <form action="/Home/Login/" method="POST">
+                    Email:
+                    <br />
+                    <input type="email" name="email" />
+                    <br />
+                    Password:
+                    <br />
+                    <input type="password" name="adgangskode" />
+                    <br /><br />
+                    <input type="submit" value="Log-in" />
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

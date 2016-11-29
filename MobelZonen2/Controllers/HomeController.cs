@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
+using System.Web.Security;
 using RepoMZ2;
+using RepoMZ2.Factories;
 
 namespace MobelZonen2.Controllers
 {
@@ -25,9 +28,25 @@ namespace MobelZonen2.Controllers
         }
 
         [HttpPost]
-        public ActionResult Login(string email, string password)
+        public ActionResult Login(string email, string adgangskode)
         {
-            return View();
+            BrugerFac bf = new BrugerFac();
+            Bruger bruger = bf.Login(email.Trim(), Crypto.Hash(adgangskode.Trim()));
+
+            if (bruger.ID > 0)
+            {
+                FormsAuthentication.SetAuthCookie(bruger.ID.ToString(), false);
+                Response.Redirect("/Admin/Default/Index/");
+            }
+
+            return Redirect("/Home/Login/");
+        }
+
+        public ActionResult Signout()
+        {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Index");
         }
 
         public ActionResult Kontakt()
@@ -55,3 +74,4 @@ namespace MobelZonen2.Controllers
 
     }
 }
+

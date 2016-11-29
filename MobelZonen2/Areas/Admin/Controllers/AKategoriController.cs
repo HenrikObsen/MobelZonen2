@@ -7,23 +7,27 @@ using RepoMZ2;
 
 namespace MobelZonen2.Areas.Admin.Controllers
 {
+    
     public class AKategoriController : Controller
     {
         private KategoriFac kf = new KategoriFac();
         private SEOFac sf = new SEOFac();
 
         // GET: Admin/AKategori
+        
         public ActionResult Index()
         {
             return View(kf.GetAll());
         }
 
+        [Authorize]
         public ActionResult Delete(int id)
         {
             kf.Delete(id);
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public ActionResult Add()
         {
             return View();
@@ -36,6 +40,7 @@ namespace MobelZonen2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         public ActionResult Edit(int id)
         {
             EditKat editkat = new EditKat();
@@ -54,6 +59,7 @@ namespace MobelZonen2.Areas.Admin.Controllers
             return View(editkat);
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult Edit(Kategori kat)
         {
@@ -61,6 +67,7 @@ namespace MobelZonen2.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
 
+        [Authorize]
         [HttpPost]
         public ActionResult EditSEO(SEO seo, int katID)
         {
@@ -85,3 +92,8 @@ namespace MobelZonen2.Areas.Admin.Controllers
         }
     }
 }
+
+//[Authorize]
+//[AllowAnonymous]
+//[Authorize(Users = "40,42,55")]
+//[Authorize(Roles = "Administrators")]
